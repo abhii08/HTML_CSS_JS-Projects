@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: bold;
+            color: white;
+        }
+        header{
+            height: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+        }
+        ul li a{
+            margin: 0 5px;
+            border: 2px solid white;
+            padding: 0 10px;
+            text-decoration: none;
+            border-radius: 50px;
+        }
+        .logo{
+            border: 2px solid white;
+            padding: 10px 5px;
+        }
+        .signup{
+            background-color: white;
+            color: black;
+        }
+        .signup:hover{
+            background-color: black;
+            color: white;
+        }
+        body{
+            font-family: "Montserrat Underline", sans-serif;
+            background-color: #2c2c2c;
+
+        }
+        main{
+            display: flex;
+            height: 90vh;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0px 150px;
+            flex-wrap: wrap;
+        }
+        main h2{
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        main p{
+            font-size: 14px;
+            font-weight: 200;
+            line-height: 31.5px;
+            margin: 30px 0px;
+        }
+        .contentleft{
+            flex: 1;
+        }
+        .contentmid{
+            flex: 2;
+        }
+        .contentright{
+            flex: 1;
+        }
+        .merc{
+            max-width: 500px;
+            height:auto
+        }
+        .btn{
+            padding: 15px 30px;
+            background: white;
+            outline: none;
+            border: none;
+            color: black;
+            border-radius: 50px;
+            font-weight: 700;
+        }
+        .btn:hover{
+            background-color: #2c2c2c;
+            color: white;
+            border: 2px solid white;
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#"> Home </a></li>
+                <li><a href="#"> Offers </a></li>
+                <li><a href="#"> Buy Now </a></li>
+                <li><a href="#"> Sell Now </a></li>
+                <li><a href="#"> About Us </a></li>
+                <li><a href="#" class="signup"> Sign Up </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contentleft">
+            <h2>Mercury</h2>
+        </div>
+        <div class="contentmid">
+            <p>Mercury is one of four terrestrial planets in the Solar System, which means it is a rocky body like Earth. It is the smallest planet in the Solar System,
+                with an equatorial radius of 2,439.7 kilometres (1,516.0 mi).[4] Mercury is also smaller—albeit more massive—than the largest natural satellites in the
+                Solar System, Ganymede and Titan. Mercury consists of approximately 70% metallic and 30% silicate material.Mercury appears to have a solid silicate crust
+                and mantle overlying a solid, metallic outer core layer, a deeper liquid core layer, and a solid inner core. The radius of Mercury's core is estimated to
+                be 2,020 ± 30 km (1,255 ± 19 mi), based on interior models constrained to be consistent with a moment of inertia factor of 0.346±0.014. Mercury's surface
+                is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive
+                for billions of years.
+            </p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="contentright">
+            <img src="Mercury.png" class="merc">
+        </div>
+    </main>
+</body>
+</html>
