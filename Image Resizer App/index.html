@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #f9f9f9;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #image-container {
+            width: 400px;
+            height: 250px;
+            border: 2px dashed #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            position: relative;
+            background: #fff;
+        }
+
+        #image-container input {
+            display: none;
+        }
+
+        #uploaded-image {
+            max-width: 100%;
+            max-height: 100%;
+            display: none;
+        }
+
+        .placeholder {
+            color: #666;
+            font-size: 16px;
+            pointer-events: none;
+            position: absolute;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: #fff;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Resizer</h1>
+
+    <!-- Upload box -->
+    <div id="image-container" onclick="document.getElementById('image-input').click()">
+        <span class="placeholder">Click here to Choose Image</span>
+        <input type="file" id="image-input" accept="image/*">
+        <img id="uploaded-image" src="#" alt="Uploaded Image">
+    </div>
+
+    <div class="buttons">
+        <button id="resize-button-instagram">Instagram (1080x1080)</button>
+        <button id="resize-button-facebook">Facebook (1200x630)</button>
+        <button id="resize-button-twitter">Twitter (1200x675)</button>
+        <button id="resize-button-website">Website (600x300)</button>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById('image-input');
+        const uploadedImage = document.getElementById('uploaded-image');
+        const placeholder = document.querySelector('.placeholder');
+
+        // Display the selected image
+        imageInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    uploadedImage.src = e.target.result;
+                    uploadedImage.style.display = 'block';
+                    placeholder.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Function to resize image
+        function resizeImage(width, height) {
+            if (!uploadedImage.src || uploadedImage.src === "#") return;
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(uploadedImage, 0, 0, width, height);
+
+            const link = document.createElement('a');
+            link.download = `resized-${width}x${height}.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        // Buttons
+        document.getElementById('resize-button-instagram')
+            .addEventListener('click', () => resizeImage(1080, 1080));
+        document.getElementById('resize-button-facebook')
+            .addEventListener('click', () => resizeImage(1200, 630));
+        document.getElementById('resize-button-twitter')
+            .addEventListener('click', () => resizeImage(1200, 675));
+        document.getElementById('resize-button-website')
+            .addEventListener('click', () => resizeImage(600, 300));
+    </script>
+</body>
+</html>
