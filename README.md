@@ -7,6 +7,7 @@ A collection of interactive web projects built with vanilla HTML, CSS, and JavaS
 -  **Image Resizer App** - https://image-resizer-black-eta.vercel.app/
 -  **Signature App** - https://signature-app-vert-rho.vercel.app/
 -  **Typing Test App** - https://typing-test-three-psi.vercel.app/
+-  **Key Logger App** - https://key-logger-topaz.vercel.app/
 
 ## 📋 Projects Overview
 
@@ -18,6 +19,7 @@ A collection of interactive web projects built with vanilla HTML, CSS, and JavaS
 - **Image Resizer App** - Tool for resizing and optimizing images with real-time preview
 - **Signature App** - Digital signature creator with drawing canvas and export functionality
 - **Typing Test App** - Advanced typing speed test with WPM calculation, accuracy tracking, and performance analytics
+- **Key Logger App** - A keylogger app is software that secretly records every keystroke typed on a device, typically used for monitoring computer activity or maliciously stealing passwords and sensitive information.
 
 - ## 🛠️ Technologies Used
 
