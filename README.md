@@ -8,6 +8,7 @@ A collection of interactive web projects built with vanilla HTML, CSS, and JavaS
 -  **Signature App** - https://signature-app-vert-rho.vercel.app/
 -  **Typing Test App** - https://typing-test-three-psi.vercel.app/
 -  **Key Logger App** - https://key-logger-topaz.vercel.app/
+-  **Weather App** - https://weather-app-mocha-psi-92.vercel.app/
 
 ## 📋 Projects Overview
 
@@ -21,6 +22,9 @@ A collection of interactive web projects built with vanilla HTML, CSS, and JavaS
 - **Typing Test App** - Advanced typing speed test with WPM calculation, accuracy tracking, and performance analytics
 - **Key Logger App** - A keylogger app is software that secretly records every keystroke typed on a device, typically used for monitoring computer activity or maliciously stealing passwords and sensitive information.
 
+- ### 🎨 API application
+- **Weather App** - Used weather api to build a simple javascript application.
+  
 - ## 🛠️ Technologies Used
 
 - **HTML5** - Semantic markup and structure
